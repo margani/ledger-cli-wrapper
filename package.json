@@ -1,0 +1,42 @@
+{
+  "name": "ledger-cli-wrapper",
+  "version": "0.1.0",
+  "description": "A wrapper for the ledger-cli (ledger-cli.org) written and packaged using Node.js",
+  "homepage": "https://github.com/margani/ledger-cli-wrapper",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/margani/ledger-cli-wrapper.git"
+  },
+  "bugs": {
+    "url": "https://github.com/margani/ledger-cli-wrapper/issues"
+  },
+  "keywords": [
+    "ledger-cli",
+    "accounting",
+    "finance"
+  ],
+  "author": {
+    "name": "Hossein Margani",
+    "email": "hossein@margani.dev"
+  },
+  "license": "MIT",
+  "main": "lib/ledger.js",
+  "readmeFilename": "README.md",
+  "scripts": {
+    "build": "babel src --out-dir dist --presets=@babel/preset-env --ignore 'src/**/*.spec.js','src/**/*.test.js'",
+    "prepublish": "npm run build",
+    "test": ""
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.0",
+    "@babel/core": "^7.13.8",
+    "@babel/plugin-proposal-object-rest-spread": "^7.13.8",
+    "@babel/preset-env": "~7.13.9",
+    "chai": "^4.3.4",
+    "mocha": "^1.17.1"
+  },
+  "dependencies": {
+    "csv-streamify": "~0.9.0",
+    "lodash": "~2.4.1"
+  }
+}
